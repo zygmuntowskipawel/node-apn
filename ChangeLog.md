@@ -1,4 +1,6 @@
 ## Changelog
+3.0.3
+* Create an npm installable package `@parse/node-apn`
 
 3.0.2-parse:
 * Fix 3.0.1-parse release
