@@ -142,7 +142,6 @@ describe("Provider", function() {
 
         it("resolves with the device token, status code and response or error of the unsent notifications", function () {
           return promise.then( (response) => {
-            console.log(response.failed)
             expect(response.failed).to.deep.equal([
               { device: "adfe5969", status: "400", response: { reason: "MissingTopic" }},
               { device: "abcd1335", status: "410", response: { reason: "BadDeviceToken", timestamp: 123456789 }},
