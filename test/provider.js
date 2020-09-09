@@ -106,6 +106,7 @@ describe("Provider", function() {
     });
 
     context("when multiple tokens are passed", function () {
+      const connectionFailedError = new Error("connection failed");
 
       beforeEach(function () {
           fakes.resolutions = [
@@ -114,7 +115,7 @@ describe("Provider", function() {
             { device: "abcd1335", status: "410", response: { reason: "BadDeviceToken", timestamp: 123456789 }},
             { device: "bcfe4433" },
             { device: "aabbc788", status: "413", response: { reason: "PayloadTooLarge" }},
-            { device: "fbcde238", error: new Error("connection failed") },
+            { device: "fbcde238", error: connectionFailedError },
           ];
       });
 
@@ -141,11 +142,12 @@ describe("Provider", function() {
 
         it("resolves with the device token, status code and response or error of the unsent notifications", function () {
           return promise.then( (response) => {
+            console.log(response.failed)
             expect(response.failed).to.deep.equal([
               { device: "adfe5969", status: "400", response: { reason: "MissingTopic" }},
               { device: "abcd1335", status: "410", response: { reason: "BadDeviceToken", timestamp: 123456789 }},
               { device: "aabbc788", status: "413", response: { reason: "PayloadTooLarge" }},
-              { device: "fbcde238", error: new Error("connection failed") },
+              { device: "fbcde238", error: connectionFailedError },
             ]);
           });
         });
