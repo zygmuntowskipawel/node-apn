@@ -1,11 +1,8 @@
 ## Changelog
 3.2.0
 * Update node-forge and pin packages
-* Update some of the urls in README for parse
 * Add typings for the "voip" NotificationPushType
 * Typed Notification.pushType
-* Install coveralls as a dev dependency on publish
-* Fix require name in readme
 
 3.1.0
 * Fix: http2session.shutdown() is not a function
