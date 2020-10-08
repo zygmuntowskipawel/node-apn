@@ -14,7 +14,10 @@ const LOAD_TEST_BATCH_SIZE = 2000;
 
 const config = require("../lib/config")({
   logger: debug,
-  prepareCertificate: () => ({}),  // credentials.certificate,
+  prepareCertificate: () => ({
+    cert: null,
+    key: null
+  }),  // credentials.certificate,
   prepareToken: credentials.token,
   prepareCA: credentials.ca,
 });
