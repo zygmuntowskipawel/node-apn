@@ -276,7 +276,7 @@ describe("Client", () => {
   // persisted until a new connection was reopened
   it("Closes connections when HTTP 500 responses are received", async () => {
     let establishedConnections = 0;
-    let responseDelay = 0;
+    let responseDelay = 50;
     server = createAndStartMockServer(TEST_PORT, (req, res, requestBody) => {
       // Wait 50ms before sending the responses in parallel
       setTimeout(() => {
