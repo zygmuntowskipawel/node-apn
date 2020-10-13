@@ -5,6 +5,7 @@
 * Add test cases to Client
 * Improve verbose messages
 * Add request timeout handler
+* Add a new config setting requestTimeout (defaults to 5000 milliseconds)
 * Change ResponseFailure.status typing to be number
 * Fix nits on typos in documentation
 * Also run tests in Node 12 and 14
