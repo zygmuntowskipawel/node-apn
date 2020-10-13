@@ -301,10 +301,10 @@ describe("Client", () => {
         mockNotification,
         mockDevice,
       );
-      expect(result).to.deep.equal({
-        device: MOCK_DEVICE_TOKEN,
-        error: new VError("Error 500, stream ended unexpectedly"),
-      });
+      expect(result).to.exist;
+      expect(result.device).to.equal(MOCK_DEVICE_TOKEN);
+      expect(result.error).to.be.an.instanceof(VError);
+      expect(result.error.message).to.have.string('stream ended unexpectedly');      
     };
     await runRequestWithInternalServerError();
     await runRequestWithInternalServerError();
