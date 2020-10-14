@@ -1,6 +1,6 @@
 ## Changelog
 
-3.3.0
+4.0.0
 * BREAKING: shutdown() function on client now destroy the client and future requests throw error
 * Add test cases to Client
 * Improve verbose messages
