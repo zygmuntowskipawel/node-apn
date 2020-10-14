@@ -55,7 +55,7 @@ export interface ProviderOptions {
    */
   connectionRetryLimit?: number;
   /**
-   * The maximum time in ms that apn will wait for a request to be responded. (Defaults to: 5000)
+   * The maximum time in ms that apn will wait for a response to a request. (Defaults to: 5000)
    */
   requestTimeout?: number;
 }

@@ -25,7 +25,7 @@ Options:
 
  - `connectionRetryLimit` {Number} The maximum number of connection failures that will be tolerated before `apn.Provider` will "give up". [See below.](#connection-retry-limit) (Defaults to: 3)
 
-- `requestTimeout` {Number} The maximum time in ms that apn will wait for a request to be responded. (Defaults to: 5000)
+- `requestTimeout` {Number} The maximum time in ms that apn will wait for a response to a request. (Defaults to: 5000)
 
 #### Provider Certificates vs. Authentication Tokens
 
