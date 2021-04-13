@@ -1,5 +1,12 @@
 ## Changelog
 
+4.1.0
+* NEW: Proxy support
+* FIX: Close client on unexpected frame error
+* NEW: Add a configurable info/error logger
+* FIX: Update endpoint address
+* FIX: Add support to zero valued expiry
+
 4.0.0
 * BREAKING: shutdown() function on client now destroy the client and future requests throw error
 * Add test cases to Client
