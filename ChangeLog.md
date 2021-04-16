@@ -1,5 +1,8 @@
 ## Changelog
 
+4.1.1
+* FIX: add proxy and fix logger types
+
 4.1.0
 * NEW: Proxy support
 * FIX: Close client on unexpected frame error
