@@ -1,5 +1,9 @@
 ## Changelog
 
+4.1.1
+* FIX: add proxy and fix logger types
+* NEW: Added support for critical notifications
+
 4.1.0
 * NEW: Proxy support
 * FIX: Close client on unexpected frame error
